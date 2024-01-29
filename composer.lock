@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1857de57d01a52b993a0cb379ea7f438",
+    "content-hash": "8afd6a6cc6d0539bf598f4e31162e571",
     "packages": [
         {
             "name": "brick/math",
@@ -2429,6 +2429,75 @@
                 }
             ],
             "time": "2023-10-17T14:13:20+00:00"
+        },
+        {
+            "name": "leroy-merlin-br/mongolid",
+            "version": "v3.5",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:leroy-merlin-br/mongolid.git",
+                "reference": "47b77c2eb84b7fe21aceb43dc4c9309f74a02d6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leroy-merlin-br/mongolid/zipball/47b77c2eb84b7fe21aceb43dc4c9309f74a02d6c",
+                "reference": "47b77c2eb84b7fe21aceb43dc4c9309f74a02d6c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mongodb": "*",
+                "illuminate/container": "^9.0 || ^10.0",
+                "illuminate/support": "^9.0 || ^10.0",
+                "mongodb/mongodb": "^1.15",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "leroy-merlin-br/coding-standard": "^3.1.0",
+                "mockery/mockery": "^1.2",
+                "phpunit/phpunit": "^9.0"
+            },
+            "suggest": {
+                "leroy-merlin-br/mongolid-laravel": "Easy, powerful and ultrafast MongoDB ODM for Laravel."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "v3.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mongolid\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                },
+                {
+                    "name": "Guilherme Guitte",
+                    "email": "guilherme.guitte@gmail.com"
+                },
+                {
+                    "name": "Boitatá",
+                    "email": "boitata@leroymerlin.com.br"
+                }
+            ],
+            "description": "Easy, powerful and ultrafast ODM for PHP and MongoDB.",
+            "keywords": [
+                "Active Record",
+                "laravel",
+                "mongo",
+                "mongodb",
+                "nosql",
+                "odm"
+            ],
+            "time": "2023-08-11T17:48:21+00:00"
         },
         {
             "name": "mongodb/laravel-mongodb",

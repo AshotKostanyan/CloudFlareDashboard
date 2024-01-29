@@ -3,6 +3,7 @@ import './bootstrap';
 import '../css/app.css';
 
 import "vue3-json-viewer/dist/index.css";
+import VueApexCharts from "vue3-apexcharts";
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';
@@ -26,6 +27,8 @@ createInertiaApp({
     },
     setup({ el, App, props, plugin }) {
         return createApp({ render: () => h(App, props) })
+        .use(VueApexCharts)
+
             .use(plugin)
             .use(ZiggyVue)
             .use(JsonViewer)

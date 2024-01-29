@@ -31,6 +31,7 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard/{LineChart}', [DashboardController::class, 'dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/dashboard/id/{id}', [DashboardController::class, 'getElementById'])->middleware(['auth', 'verified'])->name('dashboard/id');
 
 Route::middleware('auth')->group(function () {

@@ -7,13 +7,14 @@ import LineChart from '@/Components/LineChart.vue';
 
 defineProps({
     IPS: Object,
+    dataset: Array,
 });
 
 </script>
 
 <template>
     <MainLayout>
-        <LineChart :data1='{ x: new Date(2021, 0, 1), y: 800 }' ></LineChart>
+        <LineChart :count="dataset[0]" :timeperiod="dataset[1]" ></LineChart>
         <div v-if="IPS.total > 0" class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
