@@ -3,18 +3,20 @@ import MainLayout from '@/Layouts/MainLayout.vue';
 import { Head, Link } from '@inertiajs/vue3'
 import Pagination from '../Components/Pagination.vue'
 import LineChart from '@/Components/LineChart.vue';
-
+import PieChart from '@/Components/PieChart.vue';
 
 defineProps({
     IPS: Object,
-    dataset: Array,
+    PieChartDataset : Array,
+    LineChartDataset: Array,
 });
 
 </script>
 
 <template>
     <MainLayout>
-        <LineChart :count="dataset[0]" :timeperiod="dataset[1]" ></LineChart>
+        <PieChart :dataset="PieChartDataset"></PieChart>
+        <LineChart :count="LineChartDataset[0]" :timeperiod="LineChartDataset[1]" ></LineChart>
         <div v-if="IPS.total > 0" class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">

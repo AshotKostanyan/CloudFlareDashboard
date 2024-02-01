@@ -10,6 +10,7 @@ use DateInterval;
 use DatePeriod;
 use MongoDB\BSON\UTCDateTime;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Monolog\Formatter\MongoDBFormatter;
 
@@ -22,7 +23,8 @@ class DashboardController extends Controller
         // dd($dateNow->getTimestamp());
         // dd(BlockIp::all()->first()->created->format('Y-m-d'));
         return Inertia::render('Dashboard', [
-            'dataset' => ColumnChartController::getdataset($LineChart),
+            'PieChartDataset' => PieChartController::getdataset(),
+            'LineChartDataset' => ColumnChartController::getdataset($LineChart),
             'IPS' => BlockIp::orderByDesc('created_at')->paginate(14),
         ]);
     }
